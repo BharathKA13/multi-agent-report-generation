@@ -126,6 +126,17 @@ pipeline {
                 }
             }
         }
+        
+        stage('Jenkins Idle Test') {
+            steps {
+                sh '''
+                    echo "Starting idle test"
+                    sleep 600
+                    echo "Idle test finished"
+                '''
+            }
+        }
+
 
         stage('Deploy to Azure Container Apps') {
             steps {

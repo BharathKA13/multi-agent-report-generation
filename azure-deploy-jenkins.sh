@@ -8,7 +8,7 @@ set -e
 # Configuration
 RESOURCE_GROUP="research-report-jenkins-rg"
 LOCATION="eastus"
-STORAGE_ACCOUNT="reportjenkinsstore"
+STORAGE_ACCOUNT="reportjenkinsstorelatest"
 FILE_SHARE="jenkins-data"
 ACR_NAME="reportjenkinsacr"
 CONTAINER_NAME="jenkins-research-report"

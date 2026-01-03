@@ -39,7 +39,7 @@ pipeline {
         deleteDir()
         // Clone the repository
         git branch: 'main',
-            url: 'https://github.com/yashprogrammer/automated-research-report-generation.git'
+            url: 'https://github.com/sunnysavita10/automated-research-report-generation.git'
     }
 }
         
@@ -70,7 +70,7 @@ pipeline {
                 sh '''
                     # Add your test commands here
                     # For now, just verify imports work
-                    python3 -c "from research_and_analyst.api.main import app; print('✅ Imports successful')"
+                    python3 -c "from research_and_analyst.api.main import app; print('Imports successful')"
                 '''
             }
         }
@@ -115,7 +115,7 @@ pipeline {
                     
                     // Show all available tags
                     sh """
-                        echo "📋 Available tags:"
+                        echo "Available tags:"
                         az acr repository show-tags \
                           --name \$ACR_NAME \
                           --repository \$IMAGE_NAME \
@@ -146,7 +146,7 @@ pipeline {
                           echo "App state is '$CURRENT_STATE'. Recreating the Container App..."
                           az containerapp delete --name $APP_NAME --resource-group $APP_RESOURCE_GROUP --yes
                           
-                          echo "🆕 Creating new Container App..."
+                          echo "Creating new Container App..."
                           az containerapp create \
                             --name $APP_NAME \
                             --resource-group $APP_RESOURCE_GROUP \

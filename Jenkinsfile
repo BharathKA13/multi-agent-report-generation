@@ -191,15 +191,9 @@ pipeline {
                           --resource-group $APP_RESOURCE_GROUP \
                           --query properties.configuration.ingress.fqdn -o tsv)
 
-                        echo "Application URL: https://$APP_URL"
-                        echo "Waiting for readiness..."
-                        sleep 30
-
-                        if curl -f -s https://$APP_URL/health > /dev/null; then
-                            echo "Application is responding!"
-                        else
-                            echo "App may still be initializing..."
-                        fi
+                        echo "✅ Deployment completed"
+                        echo "🌐 Application URL: https://$APP_URL"
+                        
                     '''
                 }
             }

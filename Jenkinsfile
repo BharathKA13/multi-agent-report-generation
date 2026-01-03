@@ -126,7 +126,6 @@ pipeline {
                 }
             }
         }
-        
 
         stage('Deploy to Azure Container Apps') {
             steps {
@@ -139,7 +138,6 @@ pipeline {
                               --name $APP_NAME \
                               --resource-group $APP_RESOURCE_GROUP \
                               --image ${ACR_NAME}.azurecr.io/${IMAGE_NAME}:${IMAGE_TAG}
-                              --no-wait || true
                         else
                             echo "Creating new Container App..."
                             az containerapp create \
@@ -157,7 +155,6 @@ pipeline {
                               --cpu 1.0 \
                               --memory 2.0Gi \
                               --env-vars LLM_PROVIDER=$LLM_PROVIDER
-                              --no-wait || true
                         fi
 
                         echo "Adding secrets..."
@@ -168,8 +165,7 @@ pipeline {
                             openai-api-key=$OPENAI_API_KEY \
                             google-api-key=$GOOGLE_API_KEY \
                             groq-api-key=$GROQ_API_KEY \
-                            tavily-api-key=$TAVILY_API_KEY \
-                          --no-wait || true
+                            tavily-api-key=$TAVILY_API_KEY
 
                         az containerapp update \
                           --name $APP_NAME \
@@ -179,8 +175,7 @@ pipeline {
                             GOOGLE_API_KEY=secretref:google-api-key \
                             GROQ_API_KEY=secretref:groq-api-key \
                             TAVILY_API_KEY=secretref:tavily-api-key \
-                            LLM_PROVIDER=$LLM_PROVIDER \
-                          --no-wait || true
+                            LLM_PROVIDER=$LLM_PROVIDER
                     '''
                 }
             }

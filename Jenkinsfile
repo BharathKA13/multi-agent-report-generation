@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        // Azure credentials
+        //  Azure credentials
         AZURE_CLIENT_ID = credentials('azure-client-id')
         AZURE_CLIENT_SECRET = credentials('azure-client-secret')
         AZURE_TENANT_ID = credentials('azure-tenant-id')

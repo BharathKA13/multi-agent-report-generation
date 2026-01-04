@@ -22,7 +22,7 @@ pipeline {
         STORAGE_ACCOUNT_NAME = credentials('storage-account-name')
         STORAGE_ACCOUNT_KEY = credentials('storage-account-key')
 
-        // API Keys
+        // API Keys retrieved from Jenkins credentials store
         OPENAI_API_KEY = credentials('OPENAI_API_KEY')
         GOOGLE_API_KEY = credentials('GOOGLE_API_KEY')
         GROQ_API_KEY = credentials('GROQ_API_KEY')

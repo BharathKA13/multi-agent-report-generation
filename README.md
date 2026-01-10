@@ -8,7 +8,7 @@ The goal is to reduce manual research effort while ensuring accuracy, traceabili
 ---
 
 ## 🎯 Key Capabilities
-- End-to-end automation from **query → research → analysis → report**
+- End-to-end automation from **query → research → HIL → create analysts → analysis → report**
 - Multi-agent collaboration for complex reasoning tasks
 - Integration with external tools and knowledge sources
 - Modular, scalable, and production-ready design
@@ -30,10 +30,10 @@ Agents communicate asynchronously through a centralized controller, enabling fle
 ---
 
 ## 🔧 Core Technologies
-- **LLMs & Reasoning:** Agentic LLM workflows  
-- **Retrieval:** RAG-based search with external tools  
-- **Orchestration:** Multi-agent coordination and memory handling  
-- **Backend:** API-driven architecture for execution and monitoring  
+- **LLMs & Reasoning:** Agentic LLM workflows 
+- **Orchestration:** Multi-agent coordination and memory handling using LangGraph
+- **Web Search:** Web search using Tavily 
+- **Backend:** API-driven architecture for execution and monitoring with FastAPI
 - **Deployment:** Dockerized services with CI/CD readiness  
 
 ---

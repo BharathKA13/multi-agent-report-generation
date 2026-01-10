@@ -1,7 +1,7 @@
 # 🤖 Automated Research & Report Generation using Multi-Agent AI
 
 ## 📌 Overview
-This project implements an **automated research and report generation system** using a **multi-agent AI architecture**. The system is designed to transform a high-level research query into a structured, well-written report by coordinating multiple specialized AI agents for search, analysis, reasoning, and synthesis.
+This project implements an **automated research and report generation system** using a **multi-agent AI architecture**. The system is designed to transform a high-level research query into by creating and inter coordination between multiple specialized AI agents for search, analysis, reasoning, and synthesis. This results in structured, well-written report with 4 sections of any domain. The idea is to use the
 
 The goal is to reduce manual research effort while ensuring accuracy, traceability, and scalability for real-world analytical workflows.
 

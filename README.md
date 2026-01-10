@@ -34,7 +34,7 @@ Agents communicate asynchronously through a centralized controller, enabling fle
 - **Orchestration:** Multi-agent coordination and memory handling using LangGraph
 - **Web Search:** Web search using Tavily 
 - **Backend:** API-driven architecture for execution and monitoring with FastAPI
-- **Deployment:** Dockerized services with CI/CD readiness  
+- **Deployment:** Dockerized services with CI/CD readiness with Jenkins+AWS-(ECR+ECS)
 
 ---
 
